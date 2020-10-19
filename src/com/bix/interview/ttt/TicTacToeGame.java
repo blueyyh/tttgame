@@ -7,12 +7,11 @@ import java.util.stream.Stream;
 public class TicTacToeGame {
 
     public static final String PLAY_X = "X";
-    private static final String PLAY_X_WIN = "XXX";
-
     public static final String PLAY_O = "O";
-    private static final String PLAY_O_WIN = "OOO";
-
     public static final String DRAW = "Draw";
+
+    private static final String PLAY_X_WIN = "XXX";
+    private static final String PLAY_O_WIN = "OOO";
 
     private final String[] chessBoard = new String[9];
 

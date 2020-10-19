@@ -19,12 +19,10 @@ public class Main {
 
         System.out.println("By entering 1,2,3,4,...9 to place the stone. Player X will go first.");
 
-
-
         String currentPlayer = PLAY_X;
         while (winner == null) {
             System.out.println("Player " + currentPlayer + " please input a number:");
-            int input = 0;
+            int input;
             try {
                 input = scanner.nextInt();
             } catch (InputMismatchException e) {
@@ -32,8 +30,7 @@ public class Main {
                 continue;
             }
 
-            boolean p = game.placeStone(currentPlayer, input);
-            if (!p) {
+            if (!game.placeStone(currentPlayer, input)) {
                 continue;
             }
             currentPlayer = currentPlayer.equals(PLAY_X) ? PLAY_O : PLAY_X;
